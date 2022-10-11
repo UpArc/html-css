@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias HTML5</title>
+</head>
+<body>
+    <h1>Imagêm dinâmica</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagens flexíveis">
+    </picture>
+    <h1>Àudio</h1>
+    <audio preload="metadata" controls>
+        <source src="midia/Swimming Lessons - Bail Bonds.mp3" type="audio/mpeg">
+        <source src="midia/Swimming Lessons - Bail Bonds.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta audio <a href="midia/Swimming Lessons - Bail Bonds.mp3" download="Swimming Lessons - Bail Bonds.mp3" type="audio/aac">Download</a></p>
+    </audio>
+    <h1>Vídeo</h1>
+    <p>Vídeo hospedado no meu próprio servidor</p>
+
+    <video width="500" poster="" controls autoplay>
+        <source src="video/meu-video.mp4" type="video/mp4">
+        <source src="video/meu-video.ogv" type="video/ogg">
+        <source src="video/meu-video.webm" type="video/webm">
+        <p>Seu navegador não tem compartibilidade com reprodução de vídeo</p>
+    </video>
+    <h1>inserindo vídeos do youtube</h1>
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/sMXLOCGvfwg?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icones/favicon.ico" type="image/x-icon">
+    <title>Ligações</title>
+</head>
+<body>
+    <h1>Os super links</h1>
+    <p>Links é a essência fundamental do hypertexto.Permite ligar documentos entre si
+        e permite a navegação entre essas páginas.
+    </p>
+    <p>Para criar um hyperlink devemos criar <strong>âncoras</strong> através da tag
+    &lt;a&gt;</p>
+    <h2>Controlando o destino: Sou rei</h2>
+    <p>Para isso vamos usar o atributo target que tem os seguintes valores</p>
+    <p>_blank - nova janela</p>
+    <p>_self - mesma janela (padrão)</p>
+    <p>Os outros não importa, é isso, foda-se</p>
+    <p>Outro recurso interessante é o rel que indica qual é natureza do destino
+        e aceita valores como:
+    </p>
+    <p>next - link é para a próxima página</p>
+    <p>prev - link é para a página anterior</p>
+    <p>author - link é para oo site do autor do artigo atual</p>
+    <p>external - link é para outro site que não faz parte do site</p>
+    <p>nofollow - link pra um site não endossado, como um link pago</p>
+
+    <h3>Download</h3>
+    <p>Basta fazer o link direto para o arquivo e adicionar o atributo
+        &lt;download&gt; e o atributo type para indicar o tipo de arquivo
+    </p>
+    <pre><code>
+&lt;a href="arquivo/meuLivro.pdf" &lt;download&gt="meuLivro.pdf" type="aplication/pdf"&gt;&lt;a&gt;
+    </code></pre>
+    <a href="https://visionvox.net/biblioteca/r/Rupi_Kaur_O_Que_O_Sol_Faz_Com_as_Flores.pdf" download="poema.pdf" type="aplication/pdf">baixe aqui</a>
+    <h1>Links</h1>
+    <p><a href="index.html">página principal</a></p>
+    <p><a href="pag2.html">Imagens e favicons 2</a></p>
+    <p><a href="pag3.html">Hierarquia de títulos 3</a></p>
+    <p><a href="pag4.html">Listas 4</a></p>
+    <p><a href="pag6.html">Multimídia 6</a></p>
+</body>
+</html>

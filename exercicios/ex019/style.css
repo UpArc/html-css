@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(148, 245, 216); /*fundo */
+    font-family: Arial, Helvetica, sans-serif; /*fonte */
+}
+h1{
+    color:rgb(28, 185, 36); /*cor da letra */
+}
+#principal{
+    text-align: center; /*alinhamento do texto */
+    background-color: chartreuse;
+    color: white;
+}
+.topico{
+    text-align: right;
+    color:rgba(28, 185, 36, 0.322);
+}
+.texto{
+    text-align: justify;
+}

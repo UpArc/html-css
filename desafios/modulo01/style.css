@@ -1,0 +1,17 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: linear-gradient(to right, #BF544B, #A65665 );
+    text-align: center;
+}
+main{
+    background-color:wheat;
+    border-radius: 10px;
+    width: 650px;
+    padding: 20px; /*quanto o texto fica distante da borda */
+    margin: auto; /*centraliza automaticamente */
+}
+p {
+    text-align: justify;
+}

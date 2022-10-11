@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icones/favicon.ico" type="image/x-icon">
+    <title>Modulo 1</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas, áudio e vídeos</h1>
+    <p>Fotos, vídeos e áudios são essências para a construção de sites hoje em dia
+        .Ilustrar bem o seu conteúdo é imprescíndivel para deixar claro a mensagem
+        que queremos passar.
+    </p>
+    <h2>Imagens flexíveis</h2>
+    <p>Primeiro precisamos gerar imagens de tamanhos diferentes e a fazer o navegador
+        carregar a imagem certa para cada situação. para isso use a tag &lt;picture&gt;.
+    </p>
+    <p>Código base</p>
+    <pre><code>
+&lt;picture&gt;
+    &lt;img src="foto-g.png" alt="imagem flexível"&gt;
+&lt;/picture&gt;
+    </code></pre>
+    <p>O problema é quando a imagem chega em 1000px, ela não vai caber na tela, para
+        resolver isso usamos a tag &lt;source&gt;
+    <pre><code>
+&lt;picture&gt;
+    &lt;source midia="(max-width: 1050px)" srcset="foto-m.png" type="image/png"&gt;
+    &lt;img src="foto-g.png" alt="imagem flexível"&gt;
+&lt;picture&gt;
+    </code></pre>
+    </p>
+    <p>A tag source possui três atributos:
+        <ol>
+            <li>type: indica a media type da imagem(tipo)</li>
+            <li>srcset: nome da imagem que será carregada quando o limite for atingido</li>
+            <li>midia: indica o tamanho máximo a ser considerado para carregar a imagem do srcset</li>
+        </ol>
+    </p>
+    <p><ins>Importante</ins>:Existe uma ordem no source, começa sempre do menor e o último item é a
+    imagem padrão.</p>
+    <p>Experimente mudar o tamanho da janela</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="../imagens/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="../imagens/paisagem-m.png" type="image/png">
+        <img src="../imagens/paisagem-g.png" alt="paisagem grande">
+    </picture>
+    <h2>Áudios</h2>
+    <p>Do mais simples possivel, tag &lt;audio&gt;</p>
+    <pre><code>
+&lt;audio preload="metadata" controls autoplay loop&gt;
+    &lt;source src="midia/guanacast-3.mp3" type="audio/mpeg"&gt;
+    &lt;source src="midia/guanacast-3.ogg" type="audio/ogg"&gt;
+    &lt;p&gt;Não suporta áudio &lt;a href="midia/"guanacast-3.mp3" download="guanacast-3.mp3" type="audio/mpeg"
+    &lt;a&gt;&lt;p&gt;
+&lt;/audio&gt;
+    </code></pre>
+    <p>Atributos da tag audio</p>
+    <ul>
+        <li>preload - O áudio será pré-carregado ou não?</li>
+        <ul type="circle">
+            <li>metadata - Apenas as informações do arquivo (tamanho, tempo, informações de direitos...</li>
+            <li>none - Não carrega nada até o botão player ser clicado</li>
+            <li>auto (padrão) - carrega o arquivo de áudio inteiro assim que a página for carregada</li>
+        </ul>
+        <li>Controls - apresenta o player na tela</li>
+        <li>autoplay - inicia a reprodução de áudio assim que a página for carregada</li>
+        <li>loop - È um loop</li>
+    </ul>
+    <audio preload="none" controls>
+        <source src="../midia/Swimming Lessons - Bail Bonds.mp3" type="audio/mpeg">
+        <source src="../midia/Swimming Lessons - Bail Bonds.ogg" type="audio/ogg">
+    </audio>
+    <h2>Vídeos</h2>
+    <p>Usando a tag &lt;video&gt; caso o vídeio esteja hospedado no próprio servidor, não é muito recomendado</p>
+<pre><code>
+&lt;video width="600" poster="thumn.jpg" controls&gt;
+    &lt;source src="meu-video.mp4" type="video/mp4"&gt;
+    &lt;source src="meu-video.webm" type="video/webm"&gt;
+&lt;video&gt;
+</code></pre>
+    <p>vamos para os atributos</p>
+    <ul>
+        <li>width - largura do vídeio</li>
+        <li>poster - capa</li>
+        <li>controls - apresenta o player</li>
+    </ul>
+    <p>Esse é um vídeio hospedado no youtube, melhor que no próprio site</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PhDwjisdOEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1>Links</h1>
+    <p><a href="index.html">página principal</a></p>
+    <p><a href="pag2.html">Imagens e favicons 2</a></p>
+    <p><a href="pag3.html">Hierarquia de títulos 3</a></p>
+    <p><a href="pag4.html">Listas 4</a></p>
+</body>
+</html>
